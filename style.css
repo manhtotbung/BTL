@@ -5,7 +5,7 @@
 
 .header {
     height: auto;
-    background-image: linear-gradient(red, yellow,red);
+    background-image: linear-gradient(red 33%, yellow 12%,red 33%);
 
 }
 
