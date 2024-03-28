@@ -24,35 +24,42 @@
             <div class="grid ">
                 <nav class="header__navbar ">
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-iteam "><a class="header__navbar-link" href="index.html"><i
-                                    class="fa-solid fa-house"></i> Trang chủ</a></li>
+                        <li class="header__navbar-iteam "><a class="header__navbar-link" href="index.html">
+                            <i class="fa-solid fa-house"></i> Trang chủ</a>
+                        </li>
+                        <li class="header__navbar-iteam "><a class="header__navbar-link" href="admin/admin_index.html">
+                            <i class="fa-solid fa-user-shield"></i> Quản lý</a>
+                        </li>     
                     </ul>
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-iteam">
-                            <a href="" class="header__navbar-link"><i class="fa-solid fa-bell"></i> Thông báo</a>
+                        <li class="header__navbar-link">
+                            <a href="" class="header__navbar-iteam"><i class="fa-solid fa-bell"></i> Thông báo</a>
                         </li>
                         <li class="header__navbar-iteam">
-                            <a href="" class="header__navbar-link"><i class="fa-solid fa-circle-question"></i> Trợ
-                                giúp</a>
+                            <a href="" class="header__navbar-link"><i class="fa-solid fa-circle-question"></i> Trợ giúp</a>
                         </li>
-                        <li class="header__navbar-iteam header__navbar-iteam--bold">Đăng ký</li>
-                        <li class="header__navbar-iteam header__navbar-iteam--bold"><i
-                                class="fa-solid fa-right-to-bracket"></i> Đăng nhập</li>
+                        <li id="register_login" class="header__navbar-iteam header__navbar-iteam--bold">
+                            <a class="header__navbar-link" id="js-Dangky_Dangnhap"><i class="fa-solid fa-right-to-bracket"></i> Đăng ký/Đăng nhập</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__logo_search">
                     <div class="header__logo">
-                        <img class="header__logo-img"
+                        <a href="index.html">
+                            <img class="header__logo-img"
                             src="https://cdn.discordapp.com/attachments/941970614091145266/1217142992188477460/logo.png?ex=6602f3be&is=65f07ebe&hm=e2adabb337fc71a4c99e23f30a648b69f0d1045d89b02428fb683f15418ca2fe&">
+                        </a>
                     </div>
                     <div class="header__search">
                         <input class="header__search--text" type="text" name="Timkiemtxt"
-                            placeholder="Nhập sách bạn cần tìm?">
-                        <button class="header__logo_search-button">Tìm</button>
+                            placeholder="Bookstore - Chúng tôi ở đây để phục vụ bạn...">
+                        <button class="header__logo_search-button"><i class="header__logo_search-button-icon fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="header__shopping">
+                        <i class="header__shopping-gio fa-solid fa-cart-shopping fa-xl"></i>
                     </div>
                 </div>
             </div>
-
         </header>
         <div class="container-fluid">
             <div class="grid">
@@ -90,139 +97,122 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <!-- them truyen -->
                                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="SP_item-info">
                                             <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
-                                            </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
+                                                <a href="Chi_tiet_sp_jjk.html"><img class="SP_item-info-img"
+                                                    src="https://images2.thanhnien.vn/528068263637045248/2023/6/29/chu-thuat-hoi-chien-16880251034671090063527.jpg"
+                                                    alt="JJK" referrerpolicy="origin">
                                                 </a>
                                             </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
+                                            <div class="SP_item-info-name">
+                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp_jjk.html" target="_self">
+                                                    <h4 class="item-info-tagName">Jujutsu Kaisen</h4>
+                                                </a>
+                                            </div>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">247.000₫</span>
+                                                <span class="SP_item-info-money-new">171.295đ</span>
+                                                <span class="SP_item-info-money-sale">-30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                        <div class="SP_item-info">
+                                            <div class="SP_item-info__book" >
+                                                <img class="SP_item-info-img" src="https://m.media-amazon.com/images/I/91Qcnc0rubL._AC_UY327_FMwebp_QL65_.jpg" alt="Fabled-Beasts-Chronicle" referrerpolicy="origin">
+                                            </div>
+                                            <div class="SP_item-info-name">    
+                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self"><h4 class="item-info-tagName">Maze Running and other Magical Missions (Fabled Beasts Chronicles)</h4></a>
+                                            </div>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">269.000₫</span>
+                                                <span class="SP_item-info-money-new">196.370đ</span>
+                                                <span class="SP_item-info-money-sale">-27%</span>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                        <div class="SP_item-info">
+                                            <div class="SP_item-info__book" >
+                                                <img class="SP_item-info-img" src="https://m.media-amazon.com/images/I/715XqdfgwmL._AC_UY327_FMwebp_QL65_.jpg" alt="Fabled-Beasts-Chronicles" referrerpolicy="origin">
+                                            </div>
+                                            <div class="SP_item-info-name">    
+                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self"><h4 class="item-info-tagName">First Aid for Fairies and Other Fabled Beasts (Fabled Beasts Chronicles)</h4></a>
+                                            </div>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">230.000₫</span>
+                                                <span class="SP_item-info-money-new">207.000đ</span>
+                                                <span class="SP_item-info-money-sale">-10%</span>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                        <div class="SP_item-info">
+                                            <div class="SP_item-info__book" >
+                                                <img class="SP_item-info-img" src="https://st.nettruyenff.com/data/comics/106/toi-thang-cap-mot-minh-ss2.jpg" alt="Fabled-Beasts-Chronicle" referrerpolicy="origin">
+                                            </div>
+                                            <div class="SP_item-info-name">    
+                                                <a class="SP_item-info-tagName" href="" target="_self"><h4 class="item-info-tagName">Solo Leveling</h4></a>
+                                            </div>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">198.000₫</span>
+                                                <span class="SP_item-info-money-new">150.480đ</span>
+                                                <span class="SP_item-info-money-sale">-24%</span>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                        <div class="SP_item-info">
+                                            <div class="SP_item-info__book" >
+                                                <img class="SP_item-info-img" src="https://st.nettruyenff.com/data/comics/51/tran-quoc-than-te.jpg" alt="TQTT" referrerpolicy="origin">
+                                            </div>
+                                            <div class="SP_item-info-name">    
+                                                <a class="SP_item-info-tagName" href="" target="_self"><h4 class="item-info-tagName">Trấn Quốc Thần Tế</h4></a>
+                                            </div>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">235.000₫</span>
+                                                <span class="SP_item-info-money-new">183.300đ</span>
+                                                <span class="SP_item-info-money-sale">-22%</span>        
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="SP_item-info">
                                             <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
+                                                <img class="SP_item-info-img"
+                                                    src="https://st.nettruyenff.com/data/comics/125/bay-dai-ac-nhan.jpg"
+                                                    alt="THDT" referrerpolicy="origin">
                                             </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
+                                            <div class="SP_item-info-name">
+                                                <a class="SP_item-info-tagName" href="" target="_self">
+                                                    <h4 class="item-info-tagName">Thất Hình Đại Tội </h4>
                                                 </a>
                                             </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">220.000₫</span>
+                                                <span class="SP_item-info-money-new">165.110đ</span>
+                                                <span class="SP_item-info-money-sale">-24%</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                         <div class="SP_item-info">
                                             <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
+                                                <img class="SP_item-info-img"
+                                                    src="https://st.nettruyenff.com/data/comics/222/chuyen-sinh-thanh-lieu-dot-bien-4066.jpg"
+                                                    alt="CSTLDB" referrerpolicy="origin">
                                             </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
+                                            <div class="SP_item-info-name">
+                                                <a class="SP_item-info-tagName" href="" target="_self">
+                                                    <h4 class="item-info-tagName">CHUYỂN SINH THÀNH LIỄU ĐỘT BIẾN</h4>
                                                 </a>
                                             </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                        <div class="SP_item-info">
-                                            <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
-                                            </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
-                                                </a>
-                                            </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                        <div class="SP_item-info">
-                                            <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
-                                            </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
-                                                </a>
-                                            </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                        <div class="SP_item-info">
-                                            <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
-                                            </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
-                                                </a>
-                                            </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                        <div class="SP_item-info">
-                                            <div class="SP_item-info__book">
-                                                <a href="Chi_tiet_sp.html"><img class="SP_item-info-img"
-                                                        src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg"
-                                                        alt="One Piece" referrerpolicy="origin"></a>
-                                            </div>
-                                            <div class="SP_item-info-name ">
-                                                <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self">
-                                                    <h5 class="item-info-tagName">One piece</h5>
-                                                </a>
-                                            </div>
-                                            <div class="Sanpham-info-money">
-                                                <span class="Sanpham-info-money-old">230.000₫</span>
-                                                <span class="Sanpham-info-money-new">123,000đ</span>
-                                                <span class="Sanpham-info-money-sale">-15%</span>
+                                            <div class="SP_item-info-money">
+                                                <span class="SP_item-info-money-old">286.000₫</span>
+                                                <span class="SP_item-info-money-new">257.400đ</span>
+                                                <span class="SP_item-info-money-sale">-10%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -230,7 +220,6 @@
                             </div>
                             <div class="col-lg-3">
                                 <!-- liên quan -->
-
                                 <div id="accordion">
                                     <div class="card">
                                         <div class="card-header ">
@@ -240,7 +229,7 @@
                                         <div id="danhmuc" class="collapse show" data-parent="#accordion">
                                             <ul class="Menu__list">
                                                 <li class="Menu__list-item">
-                                                    <a class="Menu__list-itemlink" href="Chi_tiet_sp.html">Manhwa</a>
+                                                    <a class="Menu__list-itemlink" href="">Manhwa</a>
                                                 </li>
                                                 <li class="Menu__list-item">
                                                     <a class="Menu__list-itemlink" href="">Horror</a>
@@ -256,40 +245,37 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <footer>
-        <div class="footer__header">
-            <h4 class="footer__say">Bookstore-Tri thức muôn nơi</h4>
-            <ul class=" footer__information">
-                <li class="footer__information-item">
-                    <b>Sàn sách trực tuyến quốc gia</b><br>
-                    <b>Bookstore.com</b>
-                    <p>Thuộc bộ thông tin và truyền thông</p>
-                    <p>Đơn vị vận hành :Vivi Education</p>
-                </li>
-                <li class="footer__information-item">
-                    <a class="footer__information-link" href=""><b>Giới thiệu</b></a><br>
-                    <a class="footer__information-link" href=""><b>Kết nối</b></a>
-                    <a href="" class="footer__navbar-icon-fb">
-                        <i class="icon fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="" class="footer__navbar-icon-Ins">
-                        <i class="icon fa-brands fa-instagram"></i>
-                    </a>
-
-                </li>
-                <li class="footer__information-item">
-                    <b>Hotline: 0247 300 1369</b><br>
-                    <b>Lượt truy cập: 6.892.340</b>
-                </li>
-            </ul>
-        </div>
-
+            <div class="footer__header">
+                <h4 class="footer__say">Bookstore-Tri thức muôn nơi</h4>
+                <ul class=" footer__information">
+                    <li class="footer__information-item">
+                        <b>Sàn sách trực tuyến quốc gia</b><br>
+                        <b>Bookstore.com</b>
+                        <p>Thuộc bộ thông tin và truyền thông<br>Đơn vị vận hành :Vivi Education</p>
+                    </li>
+                    <li class="footer__information-item">
+                        <a class="footer__information-link" href=""><b>Giới thiệu</b></a><br>
+                        <a class="footer__information-link" href=""><b>Kết nối</b></a> 
+                        <a href="" class="footer__navbar-icon-fb">
+                            <i class="icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="footer__navbar-icon-Ins">
+                            <i class="icon fa-brands fa-instagram"></i>
+                        </a>
+                        
+                    </li>
+                    <li class="footer__information-item">
+                        <b>Hotline: 0247 300 1369</b><br>
+                        <b>Lượt truy cập: 6.892.340</b>
+                    </li>
+                </ul>
+            </div>
         </footer>
     </div>
 </body>
@@ -329,7 +315,7 @@
                     </div>
                 </div>
                 <div class="Xacnhan">
-                    <input type="button" id="js-back " class="ok" value="Quay lại">
+                    <input type="button" id="js-back" class="ok" value="Quay lại">
                     <input type="submit" id="js-confirm" class="ok ok-xacnhan" value="Đồng ý">
                 </div>
             </from>
