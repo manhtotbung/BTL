@@ -5,8 +5,7 @@
 
 .header {
     height: auto;
-    background-image: linear-gradient(#E0D2C7, #44B09E,#E0D2C7);
-
+    background-image: linear-gradient(0,#b5bed2,#1a58b4);
 }
 
 .grid{
@@ -32,7 +31,7 @@
 .header__navbar-link{
     display:inline-block;
     font-size: 15px;
-    color:black;
+    color:white;
     text-decoration: none; /* xóa gạch chân  */
     
 }
@@ -40,7 +39,7 @@
 .header__navbar-iteam:hover,
 .header__navbar-link:hover {
     text-decoration: none; /* xóa gạch chân  */
-    color:aliceblue;
+    color:black;
     cursor:pointer;
 
 }
@@ -56,17 +55,18 @@
 }
 
 .header__logo{
-    width:140px;
+    width: 110px;
 }
-.header__logo-img{
-    width:70px;
+.header__logo-img {
+    max-width: 100%;
 }
 
 .header__search{
-    display:flex;
-    height:34px;
-    width:60%;
-    border-radius: 2px;
+    display: flex;
+    height: 50px;
+    width: 60%;
+    border:1px solid white;
+    border-radius: 5px;
 }
 
 .header__search--text{
@@ -74,16 +74,36 @@
     height:100%;
     border:none;
     outline:none;
+    background: none;
     font-size: 15px;
+    font-weight: 500;
     padding:0px 10px 0px 10px;
+    color:white;
+}
+
+::placeholder{
+    color:white;
 }
 .header__logo_search-button{
-    height:34px;
+    width:50px;
+    height:50px;
     border:none;
     outline:none;
     font-weight: 500;
-    background-image: linear-gradient(0,#cad3e7,#1b63cf);
-    
+    background: none;
+    color:white;
+}
+.header__logo_search-button:hover{
+    color:black;
+}
+
+.header__shopping-gio{
+    color:white;
+    padding: 30px;
+}
+.header__shopping-gio:hover {
+    color:black;
+    cursor: pointer;
 }
 /*container */
 .container-fluid{
@@ -107,19 +127,6 @@
 }
 /* collapse */
 
-#accordion{
-    margin:5px;
-}
-.card-link{
-
-}
-.card-link:hover{
-    cursor:pointer;
-}
-.card-header{
-    display: flex;
-    justify-content: space-between;
-}
 .card-header:hover + .collapse,
 .collapse:hover {
     max-height: 200px; /* Điều chỉnh giá trị max-height tùy theo nhu cầu */
@@ -138,8 +145,10 @@
 }
 
 /*ket thuc collapse*/
-
-
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
 .danh_muc-icon{
     margin-top: 10px;
 }
@@ -147,7 +156,15 @@
 .carousel-inner img {
     margin:5px 0;
 }
+#accordion{
+    margin:5px;
+}
+.card-link{
 
+}
+.card-link:hover{
+    cursor:pointer;
+}
 .Menu{
     background-color: #f8fafc;
     border-radius: 2px;
@@ -160,7 +177,7 @@
 
 .Menu__list-itemlink{
      /*Xóa gạch chân */
-    color:#7e8897;
+    color:#777676;
     font-size: 15px;
     padding:8px 20px;
     display:block;
@@ -173,7 +190,7 @@
     color:#1b3e71;
     right:-5px;
 }
-/* chinhr hiệu ứng box-shadow */
+
 .SP_item-info{
     margin:5px;
     max-width:100%;
@@ -186,14 +203,13 @@
 }
 .SP_item-info__book{
     width:auto;
-    height: 200px; 
+    height: 250px; 
 }
 .SP-khung{
     border: 1px;
     border-radius: 5px;
     margin:5px;
     background-color: #ffffff;
-    
 }
 .SP_item-info-img{ 
     width: 100%;
@@ -206,7 +222,6 @@
 .SP_item-info-tagName{  
     text-decoration: none;
     color:black;
-   
 }
 .SP_item-info-tagName:hover{  
     text-decoration: none;
@@ -250,12 +265,10 @@
 
 /* footer */
 .footer__say{
-    height:35px;
     padding:6px 0;
     text-align: center;
     height:auto;
-    background-image: linear-gradient(0,#cad3e7,#1b63cf);
-     
+    background-image: linear-gradient(0,#b5bed2,#1a58b4);
 }
 .footer__information{ 
     display:flex;
@@ -277,7 +290,7 @@
 }
 
 /*From đăng kí đăng nhập*/
-/*  */
+/* Giúp chuyển động mượt mà từ tĩnh sang động */
 @keyframes fadeIn{
     from{
         opacity: 0;
@@ -295,7 +308,7 @@
     display: none;
     align-items: center;
     justify-content: center;
-    animation: fadeIn linear 0.1s;
+    animation: fadeIn linear 0.2s;
     /*opacity: 0;Làm mờ chứ kh phải biết mất*/
     /*pointer-events: none;Tác động được với phần bên dưới nó*/
 
@@ -318,7 +331,7 @@
     padding:0 30px;
     width: 500px;
     width: 500px;
-    background-image: linear-gradient(0,#cad3e7,#1b63cf);
+    background-image: linear-gradient(0,#b5bed2,#1a58b4);
     border-radius: 5px;
 
 }
@@ -489,7 +502,7 @@
 }
 .info-buy{
     list-style: none;
-    margin-left:0px;
+    margin-left: -30px;
     font-size:15px; 
 }
 .info_list-color{
@@ -521,12 +534,22 @@
     color:black;
 }
 .noidung{
-    margin:5px;
+    margin-bottom:5px;
     border-radius:5px;
     background-color: white;
 }
 .noidung-chitiet{
     display:inline-block;
+}
+
+.slide-Decu{
+    border-radius:5px;
+    background-color: white;
+    z-index: 0;  
+}
+
+.item{
+    cursor: pointer;
 }
 
 /*Liệt kê danh mục sản phẩm*/
