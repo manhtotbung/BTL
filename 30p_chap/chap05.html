@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="../BookStore_logo.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Đề cử  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+        integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid ">
+                <nav class="header__navbar ">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-iteam "><a class="header__navbar-link" href="../index.html">
+                                <i class="fa-solid fa-house"></i> Trang chủ</a>
+                        </li>
+                        <li class="header__navbar-iteam "><a class="header__navbar-link"
+                                href="../admin/admin_index.html">
+                                <i class="fa-solid fa-user-shield"></i> Quản lý</a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-link">
+                            <a href="" class="header__navbar-iteam"><i class="fa-solid fa-bell"></i> Thông báo</a>
+                        </li>
+                        <li class="header__navbar-iteam">
+                            <a href="" class="header__navbar-link"><i class="fa-solid fa-circle-question"></i> Trợ
+                                giúp</a>
+                        </li>
+                        <li id="register_login" class="header__navbar-iteam header__navbar-iteam--bold">
+                            <a class="header__navbar-link" id="js-Dangky_Dangnhap"><i
+                                    class="fa-solid fa-right-to-bracket"></i> Đăng ký/Đăng nhập</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__logo_search">
+                    <div class="header__logo">
+                        <a href="../index.html">
+                            <img class="header__logo-img" src="BookStore_logo.png">
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <input class="header__search--text" type="text" name="Timkiemtxt"
+                            placeholder="Bookstore - Chúng tôi ở đây để phục vụ bạn...">
+                        <button class="header__logo_search-button"><i
+                                class="header__logo_search-button-icon fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="header__shopping">
+                        <i class="header__shopping-gio fa-solid fa-cart-shopping fa-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="grid">
+                <div class="row">
+                    <div class="trangchu">
+                        <ul class="trangchu-chitiet">
+                            <li class="li"><a class="li-link" href="../index.html"><i class="fa-solid fa-house"></i><b
+                                        class="btrangchu">Trang chủ &nbsp;</b> </a></li>
+                            <li class="li"><b style="color:rgb(8, 102, 253);"> >&nbsp;30 phút trước lời tỏ tình</b>
+                            </li>
+                            <li class="li"><a class="li-link" href=""> &nbsp; </a> </li>
+                        </ul>
+                    </div>
+                    <!-- bat dau -->
+                    <!-- chap trước chap sau button -->
+                    <div class="container">
+                        <div class="row-heading">
+                            <ul class="col-xs-12 col-lg-12 pager">
+                                <!-- chap trước -->
+                                <li>
+                                    <a href="chap04.html" class="pre-button "><i
+                                            class="fa-solid fa-chevron-left"></i></a>
+                                </li>
+                                <!-- danh sách -->
+                                <li>
+                                    <a href="#danhsach" class="button pre-button"><i class="fa-solid fa-list"></i></a>
+                                </li>
+                                <!-- chap sau -->
+                                <li>
+                                    <a href="chap06.html" class="after-button"><i
+                                            class="fa-solid fa-chevron-right"></i></a>
+                                </li>
+                                <!-- nut quay ve dau trang  -->
+                                <button onclick="topFunction()" id="myBtn" title="Go to top"> <i
+                                        class="fa-solid fa-chevron-up"></i>
+                                </button>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                   
+                    <div class="container">
+                        <h4 id="tieudechap">30 Phút Trước Tỏ Tình Chap 5</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- phan doc truyen -->
+        <div class="container-bao-anh">
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/1_01-45.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/1_02-44.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/1_03-44.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/1_04-40.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/2_01-44.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/2_02-44.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/2_03-41.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/2_04-38.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/3_01-43.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/3_02-43.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/3_03-37.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/3_04-32.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/4_01-27.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/4_02-27.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/4_03-25.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/4_04-21.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/5_01-27.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/5_02-27.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/5_03-21.jpg">
+            </div>
+            <div class="page-chapter">
+                <img class="anh" src="http://boylovewithsany.com/wp-content/uploads/2023/08/5_04-17.jpg">
+            </div>
+</div>
+        <!-- chap trước chap sau button -->
+        <div class="container">
+            <div class="row-heading">
+                <ul class="col-xs-12 col-lg-12 pager">
+                    <!-- chap trước -->
+                    <li>
+                        <a href="chap04.html" class="pre-button "><i
+                                class="fa-solid fa-chevron-left"></i></a>
+                    </li>
+                    <!-- danh sách -->
+                    <li>
+                        <a href="#danhsach" class="button pre-button"><i class="fa-solid fa-list"></i></a>
+                    </li>
+                    <!-- chap sau -->
+                    <li>
+                        <a href="chap06.html" class="after-button"><i
+                                class="fa-solid fa-chevron-right"></i></a>
+                    </li>
+                    <!-- nut quay ve dau trang  -->
+                    <button onclick="topFunction()" id="myBtn" title="Go to top"> <i
+                            class="fa-solid fa-chevron-up"></i>
+                    </button>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- danh sách chap -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 slchap">
+                    <h4 style="color: #777676;margin: 10px 0;">&nbsp &nbsp <i class="fa-regular fa-file"></i>&nbsp Danh
+                        sách
+                        chap
+                    </h4>
+                    <hr style="background-color:black">
+                    <div class="col-xs-12 col-md-12 col-lg-12">
+                        <div class="row-heading">
+                            <div class="col-xs-5 col-lg-8 "><b>Số chương</b>
+                            </div>
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <h5>Cập nhật</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav id="danhsach" class="col-xs-12 col-md-12 col-lg-12">
+                        <hr style="background-color:black">
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap00.html" class="text-chap">Chap 0</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap01.html" class="text-chap">Chap 1</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap02.html" class="text-chap">Chap 2</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap03.html" class="text-chap">Chap 3</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap04.html" class="text-chap">Chap 4</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap05.html" class="text-chap">Chap 5</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap06.html" class="text-chap">Chap 6</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap07.html" class="text-chap">Chap 7</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap08.html" class="text-chap">Chap 8</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap09.html" class="text-chap">Chap 9</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap10.html" class="text-chap">Chap 10</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap11.html" class="text-chap">Chap 11</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap12.html" class="text-chap">Chap 12</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap13.html" class="text-chap">Chap 13</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap14.html" class="text-chap">Chap 14</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap15.html" class="text-chap">Chap 15</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap16.html" class="text-chap">Chap 16</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap17.html" class="text-chap">Chap 17</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap18.html" class="text-chap">Chap 18</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap19.html" class="text-chap">Chap 19</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap20.html" class="text-chap">Chap 20</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap21.html" class="text-chap">Chap 21</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap22.html" class="text-chap">Chap 22 end</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                        <li class="row-heading chap-detail">
+                            <!-- số chap -->
+                            <div class="col-xs-5 col-lg-8">
+                                <a href="chap23.html" class="text-chap">Chap 23 NT</a>
+                            </div>
+                            <!-- cập nhật -->
+                            <div class="col-xs-4 col-xm-5 col-lg-4 ">
+                                <i class="lam-mo">10 giờ trước</i>
+                            </div>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer__header">
+                <h4 class="footer__say">Bookstore-Tri thức muôn nơi</h4>
+                <ul class=" footer__information">
+                    <li class="footer__information-item">
+                        <b>Sàn sách trực tuyến quốc gia</b><br>
+                        <b>Bookstore.com</b>
+                        <p>Thuộc bộ thông tin và truyền thông<br>Đơn vị vận hành :Vivi Education</p>
+                    </li>
+                    <li class="footer__information-item">
+                        <a class="footer__information-link" href=""><b>Giới thiệu</b></a><br>
+                        <a class="footer__information-link" href=""><b>Kết nối</b></a>
+                        <a href="" class="footer__navbar-icon-fb">
+                            <i class="icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="footer__navbar-icon-Ins">
+                            <i class="icon fa-brands fa-instagram"></i>
+                        </a>
+
+                    </li>
+                    <li class="footer__information-item">
+                        <b>Hotline: 0247 300 1369</b><br>
+                        <b>Lượt truy cập: 6.892.340</b>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- form đăng ký -->
+    <div class="Dieukhien" id="js-modal">
+        <div class="Dieukhien_overlay"></div>
+        <div class="Dieukhien_body">
+            <!-- Đăng ký còn Đăng nhập thì sửa lại tẹo-->
+            <div class="Dieukhien_from">
+                <from class="Dangky_Dangnhap">
+                    <div class="Dangky_Dangnhap_from">
+                        <h3 class="Dangky_Dangnhap_up">Đăng ký</h3>
+                        <span class="Dangky_Dangnhap_in">Đăng nhập</span>
+                    </div>
+                    <div class="from_nhap">
+                        <input type="text" name="nametxt" id="username" class="Inputtxt" placeholder="Tên đăng nhập*">
+                    </div>
+                    <div class="from_nhap">
+                        <input type="text" name="passwordtxt" id="password" class="Inputtxt"
+                            placeholder="Nhập mật khẩu*">
+                    </div>
+                    <div class="Chinhsach">
+                        <div class="Chinhsach-dk">
+                            <input type="checkbox" name="check" class="check-dk">
+                            Bằng việc đăng kí, bạn đã đồng ý với Bookstore về
+                            <a class="Chinhsach_link" href="">Điều khoản dịch vụ </a>
+                            & <a class="Chinhsach_link" href="">Chính sách bảo mật</a>
+                        </div>
+                    </div>
+                    <div class="Xacnhan">
+                        <input type="button" id="js-back" class="ok" value="Quay lại">
+                        <input type="submit" id="js-confirm" class="ok ok-xacnhan" value="Đồng ý">
+                    </div>
+                </from>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f2e954852d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+
+    <!-- Đề cử -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Js -->
+    <script src="script.js"></script>
+
+    <script>
+        function goToSelectedChapter() {
+            // Lấy select box bằng id
+            var selectBox = document.getElementById("ctl00_mainContent_ddlSelectChapter");
+
+            // Lấy giá trị của chương đã chọn
+            var selectedChapter = selectBox.value;
+
+            // Chuyển hướng đến trang của chương đã chọn
+            window.location.href = selectedChapter;
+        }
+    </script>
+
+    <!-- dropdown -->
+
+
+</body>
+
+</html>

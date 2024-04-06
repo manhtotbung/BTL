@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo website</title>
+    <title>Book Store(MD)</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <link rel="icon" href="https://cdn.discordapp.com/attachments/941970614091145266/1217142992188477460/logo.png?ex=6602f3be&is=65f07ebe&hm=e2adabb337fc71a4c99e23f30a648b69f0d1045d89b02428fb683f15418ca2fe&" type="image/x-icon" />
@@ -42,7 +42,7 @@
                     <div class="header__logo">
                         <a href="index.html">
                             <img class="header__logo-img"
-                            src="https://cdn.discordapp.com/attachments/941970614091145266/1217142992188477460/logo.png?ex=6602f3be&is=65f07ebe&hm=e2adabb337fc71a4c99e23f30a648b69f0d1045d89b02428fb683f15418ca2fe&">
+                            src="BookStore_logo.png">
                         </a>
                     </div>
                     <div class="header__search">
@@ -114,12 +114,35 @@
                                 <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
                                     <div class="SP_item-info">
                                         <div class="SP_item-info__book">
+                                            <a href="Chi_tiet_sp_hero.html"><img class="SP_item-info-img "
+                                                    src="https://xfs-n10.xfsbb.com/thumb/W600/ampi/ae5/ae5c3d7dccc8a37818d46074b04676da5dcd2679_2644_3713_1769021.jpeg"
+                                                    alt="MD" referrerpolicy="origin"></a>
+                                        </div>
+                                        <div class="SP_item-info-name">
+                                            <a class="SP_item-info-tagName" href="Chi_tiet_sp_hero.html"
+                                                target="_self">
+                                                <h6 class="item-info-tagName">I'm Kinda Chubby and I'm Your Hero
+                                                </h6>
+                                            </a>
+
+                                        </div>
+                                        <div class="SP_item-info-money">
+                                            <span class="SP_item-info-money-old">499.000₫</span>
+                                            <span class="SP_item-info-money-new">349,000đ</span>
+                                            <span class="SP_item-info-money-sale">-15%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                                    <div class="SP_item-info">
+                                        <div class="SP_item-info__book">
                                             <a href="Chi_tiet_sp_miendich.html"><img class="SP_item-info-img "
                                                     src="https://m.media-amazon.com/images/I/81FuGhBLSWL._AC_UL480_FMwebp_QL65_.jpg"
                                                     alt="Immune" referrerpolicy="origin"></a>
                                         </div>
                                         <div class="SP_item-info-name">
-                                            <a class="SP_item-info-tagName" href="Chi_tiet_sp_miendich.html" target="_self">
+                                            <a class="SP_item-info-tagName" href="Chi_tiet_sp_miendich.html"
+                                                target="_self">
                                                 <h6 class="item-info-tagName">Miễn dịch - Du hành thăm hệ thống bí ẩn
                                                     giữ cho ta sống sót
                                                 </h6>
@@ -136,7 +159,7 @@
                                 <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
                                     <div class="SP_item-info">
                                         <div class="SP_item-info__book" >
-                                            <img class="SP_item-info-img " src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg" alt="One Piece" referrerpolicy="origin">
+                                            <a href="Chi_tiet_sp.html"><img class="SP_item-info-img " src="https://cdnnvd.com/nettruyen/thumb/one-piece.jpg" alt="One Piece" referrerpolicy="origin"></a>
                                         </div>
                                         <div class="SP_item-info-name">    
                                             <a class="SP_item-info-tagName" href="Chi_tiet_sp.html" target="_self"><h4 class="item-info-tagName">One piece - Đảo hải tặc</h4></a>
@@ -270,8 +293,7 @@
                         </a>
                         <a href="" class="footer__navbar-icon-Ins">
                             <i class="icon fa-brands fa-instagram"></i>
-                        </a>
-                        
+                        </a>   
                     </li>
                     <li class="footer__information-item">
                         <b>Hotline: 0247 300 1369</b><br>
@@ -295,10 +317,12 @@
                         <span class="Dangky_Dangnhap_in">Đăng nhập</span>
                     </div>
                     <div class="from_nhap">
-                        <input type="text" name="nametxt" id="username" class="Inputtxt" placeholder="Tên đăng nhập*">
+                        <p class="info__from"><i class="fa-regular fa-user"></i> Tên tài khoản</p>
+                        <input type="text" name="nametxt" id="username" class="Inputtxt" placeholder="VD: abc@gmail.com*">
                     </div>
                     <div class="from_nhap">
-                        <input type="text" name="passwordtxt" id="password" class="Inputtxt" placeholder="Nhập mật khẩu*">
+                        <p class="info__from"><i class="fa-solid fa-lock"></i> Mật khẩu</p>
+                        <input type="text" name="passwordtxt" id="password" class="Inputtxt" placeholder="8 kí tự ít nhất 1 kí tự đặc biệt*">
                     </div>
                     <div class="Chinhsach">
                         <div class="Chinhsach-dk">
@@ -310,7 +334,7 @@
                     </div>
                     <div class="Xacnhan">
                         <input type="button" id="js-back" class="ok" value="Quay lại">
-                        <input type="submit" id="js-confirm" class="ok ok-xacnhan" value="Đồng ý">
+                        <input type="submit" id="js-confirm" class="ok ok-xacnhan" value="Đăng ký">
                     </div>
                 </from>
 

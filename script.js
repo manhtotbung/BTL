@@ -18,7 +18,7 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     nav:false, //khong để hiện điều hướng
     autoplay:true,
-    autoplayTimeout:3000,
+    autoplayTimeout:2000,
     autoplaySpeed:1500,
     dotsSpeed:500,
     autoplayHoverPause:true,//Dừng khi di chuột vào phần owl-carousel
